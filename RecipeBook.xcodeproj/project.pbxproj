@@ -58,8 +58,54 @@
 				07DC99E6DBC41960EF1CA1CD /* Pods-RecipeBook.debug.xcconfig */,
 				B98A303049C07C1F769F8875 /* Pods-RecipeBook.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AB228C032A83CCDE0035043E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AB228C042A83CD360035043E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AB228C052A83CD3D0035043E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AB228C062A83CD460035043E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ABACE86B2A83AA03009C77EE /* AppDelegate.swift */,
+				ABACE86D2A83AA03009C77EE /* SceneDelegate.swift */,
+				ABACE8762A83AA04009C77EE /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AB228C072A83CD4D0035043E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ABACE86F2A83AA03009C77EE /* ViewController.swift */,
+				ABACE8712A83AA03009C77EE /* Main.storyboard */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AB228C082A83CD560035043E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		ABACE85F2A83AA03009C77EE = {
@@ -84,12 +130,13 @@
 		ABACE86A2A83AA03009C77EE /* RecipeBook */ = {
 			isa = PBXGroup;
 			children = (
-				ABACE86B2A83AA03009C77EE /* AppDelegate.swift */,
-				ABACE86D2A83AA03009C77EE /* SceneDelegate.swift */,
-				ABACE86F2A83AA03009C77EE /* ViewController.swift */,
-				ABACE8712A83AA03009C77EE /* Main.storyboard */,
+				AB228C082A83CD560035043E /* ViewModels */,
+				AB228C072A83CD4D0035043E /* ViewControllers */,
+				AB228C062A83CD460035043E /* Views */,
+				AB228C052A83CD3D0035043E /* Networking */,
+				AB228C042A83CD360035043E /* Data */,
+				AB228C032A83CCDE0035043E /* Extensions */,
 				ABACE8742A83AA04009C77EE /* Assets.xcassets */,
-				ABACE8762A83AA04009C77EE /* LaunchScreen.storyboard */,
 				ABACE8792A83AA04009C77EE /* Info.plist */,
 			);
 			path = RecipeBook;
