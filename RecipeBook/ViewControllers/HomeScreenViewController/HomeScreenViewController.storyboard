@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,35 +18,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lE8-Tl-adb">
-                                <rect key="frame" x="16" y="59" width="361" height="20"/>
+                                <rect key="frame" x="16" y="75" width="295" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to cook today?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X40-Cc-4Sy">
-                                <rect key="frame" x="16" y="87" width="361" height="76.666666666666686"/>
+                                <rect key="frame" x="16" y="111" width="295" height="76.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1R-Xl-mul">
-                                <rect key="frame" x="31.999999999999996" y="179.66666666666666" width="49.666666666666657" height="34.333333333333343"/>
+                                <rect key="frame" x="327" y="75" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="7eW-vL-9lm"/>
+                                    <constraint firstAttribute="height" constant="50" id="Wik-gY-4Wg"/>
+                                </constraints>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CDc-rT-yag"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="V1R-Xl-mul" firstAttribute="top" secondItem="X40-Cc-4Sy" secondAttribute="bottom" constant="16" id="1Da-Nn-kTf"/>
-                            <constraint firstItem="lE8-Tl-adb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Bg0-4e-g60"/>
-                            <constraint firstItem="V1R-Xl-mul" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="EMV-Yn-AfH"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="X40-Cc-4Sy" secondAttribute="trailing" constant="16" id="K14-lE-K0n"/>
-                            <constraint firstItem="X40-Cc-4Sy" firstAttribute="top" secondItem="lE8-Tl-adb" secondAttribute="bottom" constant="8" id="Oyp-qd-70q"/>
-                            <constraint firstItem="X40-Cc-4Sy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="fJE-li-isz"/>
-                            <constraint firstItem="lE8-Tl-adb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="rzF-eT-MZZ"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lE8-Tl-adb" secondAttribute="trailing" constant="16" id="zXy-EB-s76"/>
+                            <constraint firstItem="X40-Cc-4Sy" firstAttribute="top" secondItem="lE8-Tl-adb" secondAttribute="bottom" constant="16" id="3fT-P8-wPr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="V1R-Xl-mul" secondAttribute="trailing" constant="16" id="7DS-Lb-j5j"/>
+                            <constraint firstItem="X40-Cc-4Sy" firstAttribute="trailing" secondItem="lE8-Tl-adb" secondAttribute="trailing" id="BW6-3d-wmL"/>
+                            <constraint firstItem="lE8-Tl-adb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="J6H-xd-5kn"/>
+                            <constraint firstItem="V1R-Xl-mul" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="Oda-la-uI3"/>
+                            <constraint firstItem="V1R-Xl-mul" firstAttribute="leading" secondItem="lE8-Tl-adb" secondAttribute="trailing" constant="16" id="WDS-L2-agz"/>
+                            <constraint firstItem="lE8-Tl-adb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="dXa-KC-AFr"/>
+                            <constraint firstItem="X40-Cc-4Sy" firstAttribute="leading" secondItem="lE8-Tl-adb" secondAttribute="leading" id="kCh-AI-JIm"/>
                         </constraints>
                     </view>
                     <connections>
@@ -56,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="5"/>
+            <point key="canvasLocation" x="139.69465648854961" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>
