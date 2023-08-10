@@ -83,8 +83,6 @@
 		AB228C062A83CD460035043E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				ABACE86B2A83AA03009C77EE /* AppDelegate.swift */,
-				ABACE8762A83AA04009C77EE /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -143,6 +141,9 @@
 				AB228C032A83CCDE0035043E /* Extensions */,
 				ABACE8742A83AA04009C77EE /* Assets.xcassets */,
 				ABACE8792A83AA04009C77EE /* Info.plist */,
+				ABACE86B2A83AA03009C77EE /* AppDelegate.swift */,
+				ABACE86D2A83AA03009C77EE /* SceneDelegate.swift */,
+				ABACE8762A83AA04009C77EE /* LaunchScreen.storyboard */,
 			);
 			path = RecipeBook;
 			sourceTree = "<group>";

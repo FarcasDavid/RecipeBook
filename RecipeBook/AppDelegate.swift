@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
             // Override point for customization after application launch.
-            sleep(2)
             let window = UIWindow(frame: UIScreen.main.bounds)
             window.rootViewController = NameScreenViewController()
             window.makeKeyAndVisible()
