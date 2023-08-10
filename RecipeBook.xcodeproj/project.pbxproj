@@ -10,10 +10,12 @@
 		3688DE0E4DB668459E481CC5 /* Pods_RecipeBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C4F59D1BFECC4865182FDC /* Pods_RecipeBook.framework */; };
 		AB105C972A83DD8B00EAE886 /* NameScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB105C952A83DD8B00EAE886 /* NameScreenViewController.swift */; };
 		AB105C982A83DD8B00EAE886 /* NameScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB105C962A83DD8B00EAE886 /* NameScreenViewController.xib */; };
+		AB14BC752A84F43000A94B45 /* HomeScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB14BC742A84F43000A94B45 /* HomeScreenViewController.storyboard */; };
 		ABACE86C2A83AA03009C77EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABACE86B2A83AA03009C77EE /* AppDelegate.swift */; };
 		ABACE8752A83AA04009C77EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABACE8742A83AA04009C77EE /* Assets.xcassets */; };
 		ABACE8782A83AA04009C77EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABACE8762A83AA04009C77EE /* LaunchScreen.storyboard */; };
 		ABACE8812A83AAA9009C77EE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABACE8802A83AAA9009C77EE /* .swiftlint.yml */; };
+		ABF5FD9C2A84CEED007AFBAC /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF5FD9A2A84CEED007AFBAC /* HomeScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,12 +23,14 @@
 		53C4F59D1BFECC4865182FDC /* Pods_RecipeBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecipeBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB105C952A83DD8B00EAE886 /* NameScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameScreenViewController.swift; sourceTree = "<group>"; };
 		AB105C962A83DD8B00EAE886 /* NameScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameScreenViewController.xib; sourceTree = "<group>"; };
+		AB14BC742A84F43000A94B45 /* HomeScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreenViewController.storyboard; sourceTree = "<group>"; };
 		ABACE8682A83AA03009C77EE /* RecipeBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABACE86B2A83AA03009C77EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABACE8742A83AA04009C77EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABACE8772A83AA04009C77EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABACE8792A83AA04009C77EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABACE8802A83AAA9009C77EE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		ABF5FD9A2A84CEED007AFBAC /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		B98A303049C07C1F769F8875 /* Pods-RecipeBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeBook.release.xcconfig"; path = "Target Support Files/Pods-RecipeBook/Pods-RecipeBook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +94,7 @@
 		AB228C072A83CD4D0035043E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				ABF5FD992A84CED3007AFBAC /* HomeScreenViewController */,
 				AB940D642A83E02A00C8A0FB /* NameScreenViewController */,
 			);
 			path = ViewControllers;
@@ -142,10 +147,18 @@
 				ABACE8742A83AA04009C77EE /* Assets.xcassets */,
 				ABACE8792A83AA04009C77EE /* Info.plist */,
 				ABACE86B2A83AA03009C77EE /* AppDelegate.swift */,
-				ABACE86D2A83AA03009C77EE /* SceneDelegate.swift */,
 				ABACE8762A83AA04009C77EE /* LaunchScreen.storyboard */,
 			);
 			path = RecipeBook;
+			sourceTree = "<group>";
+		};
+		ABF5FD992A84CED3007AFBAC /* HomeScreenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ABF5FD9A2A84CEED007AFBAC /* HomeScreenViewController.swift */,
+				AB14BC742A84F43000A94B45 /* HomeScreenViewController.storyboard */,
+			);
+			path = HomeScreenViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +225,7 @@
 				ABACE8812A83AAA9009C77EE /* .swiftlint.yml in Resources */,
 				AB105C982A83DD8B00EAE886 /* NameScreenViewController.xib in Resources */,
 				ABACE8782A83AA04009C77EE /* LaunchScreen.storyboard in Resources */,
+				AB14BC752A84F43000A94B45 /* HomeScreenViewController.storyboard in Resources */,
 				ABACE8752A83AA04009C77EE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB105C972A83DD8B00EAE886 /* NameScreenViewController.swift in Sources */,
+				ABF5FD9C2A84CEED007AFBAC /* HomeScreenViewController.swift in Sources */,
 				ABACE86C2A83AA03009C77EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
