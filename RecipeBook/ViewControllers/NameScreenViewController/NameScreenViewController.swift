@@ -14,9 +14,26 @@ class NameScreenViewController: UIViewController {
     @IBOutlet private weak var nameTextField: UITextField!
 
     override func viewDidLoad() {
+
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        nameTextField.delegate = self
+    }
+
+}
+
+extension NameScreenViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("Return pressed")
+
+        // Perform segue to Home Screen
+        let storyboard = UIStoryboard(name: "HomeScreenViewController", bundle: nil)
+        let homeScreenViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController")
+        homeScreenViewController.modalPresentationStyle = .fullScreen
+        present(homeScreenViewController, animated: true)
+
+        return false
     }
 
 }
