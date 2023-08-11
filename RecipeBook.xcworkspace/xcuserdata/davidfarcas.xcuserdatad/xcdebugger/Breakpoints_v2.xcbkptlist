@@ -14,8 +14,8 @@
             filePath = "RecipeBook/Data/UserDefaultsName.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "isFirstLaunch()"
             landmarkType = "7">
          </BreakpointContent>

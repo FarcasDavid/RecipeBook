@@ -21,7 +21,7 @@ class NameScreenViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        var launchType = UserDefaultsName()
+        let launchType = UserDefaultsService()
         if !launchType.isFirstLaunch() {
             let storyboard = UIStoryboard(name: "HomeScreenViewController", bundle: nil)
             let homeScreenViewController =
@@ -37,7 +37,7 @@ extension NameScreenViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Save User Credentials (Name)
-        let userDefaultsName = UserDefaultsName()
+        let userDefaultsName = UserDefaultsService()
         if let name = nameTextField.text {
             userDefaultsName.setUserName(name)
         }

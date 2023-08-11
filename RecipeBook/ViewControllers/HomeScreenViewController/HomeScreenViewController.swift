@@ -19,7 +19,7 @@ class HomeScreenViewController: UIViewController {
         super.viewDidLoad()
 
         setupSearchButton()
-        let userDefaultsName = UserDefaultsName()
+        let userDefaultsName = UserDefaultsService()
         if let username = userDefaultsName.getUserName() {
             welcomeUserLabel.text = "Hello, \(username)"
         }
