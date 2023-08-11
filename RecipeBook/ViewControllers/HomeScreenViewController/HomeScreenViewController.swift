@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class HomeScreenViewController: UIViewController {
 
@@ -18,8 +19,11 @@ class HomeScreenViewController: UIViewController {
         super.viewDidLoad()
 
         setupSearchButton()
+        let userDefaultsName = UserDefaultsName()
+        if let username = userDefaultsName.getUserName() {
+            welcomeUserLabel.text = "Hello, \(username)"
+        }
     }
-
 }
 
 // MARK: UISetup

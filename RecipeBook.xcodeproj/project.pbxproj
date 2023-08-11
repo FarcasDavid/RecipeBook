@@ -11,6 +11,7 @@
 		AB105C972A83DD8B00EAE886 /* NameScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB105C952A83DD8B00EAE886 /* NameScreenViewController.swift */; };
 		AB105C982A83DD8B00EAE886 /* NameScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB105C962A83DD8B00EAE886 /* NameScreenViewController.xib */; };
 		AB14BC752A84F43000A94B45 /* HomeScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB14BC742A84F43000A94B45 /* HomeScreenViewController.storyboard */; };
+		AB3BD53D2A851E7F00D44712 /* UserDefaultsName.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BD53C2A851E7F00D44712 /* UserDefaultsName.swift */; };
 		ABACE86C2A83AA03009C77EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABACE86B2A83AA03009C77EE /* AppDelegate.swift */; };
 		ABACE8752A83AA04009C77EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABACE8742A83AA04009C77EE /* Assets.xcassets */; };
 		ABACE8782A83AA04009C77EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABACE8762A83AA04009C77EE /* LaunchScreen.storyboard */; };
@@ -24,6 +25,7 @@
 		AB105C952A83DD8B00EAE886 /* NameScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameScreenViewController.swift; sourceTree = "<group>"; };
 		AB105C962A83DD8B00EAE886 /* NameScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NameScreenViewController.xib; sourceTree = "<group>"; };
 		AB14BC742A84F43000A94B45 /* HomeScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreenViewController.storyboard; sourceTree = "<group>"; };
+		AB3BD53C2A851E7F00D44712 /* UserDefaultsName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsName.swift; sourceTree = "<group>"; };
 		ABACE8682A83AA03009C77EE /* RecipeBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABACE86B2A83AA03009C77EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABACE8742A83AA04009C77EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		AB228C042A83CD360035043E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				AB3BD53C2A851E7F00D44712 /* UserDefaultsName.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				AB105C972A83DD8B00EAE886 /* NameScreenViewController.swift in Sources */,
 				ABF5FD9C2A84CEED007AFBAC /* HomeScreenViewController.swift in Sources */,
 				ABACE86C2A83AA03009C77EE /* AppDelegate.swift in Sources */,
+				AB3BD53D2A851E7F00D44712 /* UserDefaultsName.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
