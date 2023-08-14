@@ -11,16 +11,12 @@ class NameScreenViewModel {
 
     let userDefaultsProperty = UserDefaultsService()
 
-    func updateUserName(_ name: String) {
-        userDefaultsProperty.setUserName(name)
+    var wasLaunchedBefore: Bool {
+        return userDefaultsProperty.getWasLaunchedBefore()
     }
 
-    var wasLaunchedBefore: Bool {
-        if userDefaultsProperty.getWasLaunchedBefore() {
-            return true
-        } else {
-            return false
-        }
+    func setUserName(_ name: String) {
+        userDefaultsProperty.setUserName(name)
     }
 
 }

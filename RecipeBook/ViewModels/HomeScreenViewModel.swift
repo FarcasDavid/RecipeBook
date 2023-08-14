@@ -11,7 +11,7 @@ class HomeScreenViewModel {
 
     let userDefaultsName = UserDefaultsService()
 
-    func getUserName() -> String {
+    var userName: String {
         return userDefaultsName.getUserName() ?? ""
     }
 

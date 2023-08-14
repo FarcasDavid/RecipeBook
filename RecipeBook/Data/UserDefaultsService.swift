@@ -9,7 +9,7 @@ import Foundation
 
 class UserDefaultsService {
 
-    let userDefaults = UserDefaults.standard
+    private let userDefaults = UserDefaults.standard
 
     func setUserName(_ name: String) {
         userDefaults.set(name, forKey: UserDefaultsKeys.username.rawValue)

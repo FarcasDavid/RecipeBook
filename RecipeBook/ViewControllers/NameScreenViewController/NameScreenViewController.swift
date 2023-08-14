@@ -20,7 +20,7 @@ class NameScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        nameTextField.delegate = self
+        setupTextField()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -42,7 +42,7 @@ extension NameScreenViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Update User Credentials (Name)
         if let name = nameTextField.text {
-            viewModel.updateUserName(name)
+            viewModel.setUserName(name)
         }
 
         // Perform segue to Home Screen
@@ -51,6 +51,16 @@ extension NameScreenViewController: UITextFieldDelegate {
         homeScreenViewController.modalPresentationStyle = .fullScreen
         present(homeScreenViewController, animated: true)
         return false
+    }
+
+}
+
+// MARK: Setup
+extension NameScreenViewController {
+
+    private func setupTextField() {
+        nameTextField.delegate = self
+        nameTextField.textAlignment = .center
     }
 
 }

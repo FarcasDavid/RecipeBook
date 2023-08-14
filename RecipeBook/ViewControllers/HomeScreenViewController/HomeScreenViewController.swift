@@ -22,9 +22,8 @@ class HomeScreenViewController: UIViewController {
         super.viewDidLoad()
 
         setupSearchButton()
-        if let username = viewModel.userDefaultsName.getUserName() {
-            welcomeUserLabel.text = "Hello, \(username)"
-        }
+        setupUI()
+
     }
 
 }
@@ -36,6 +35,10 @@ extension HomeScreenViewController {
         searchButton.layer.borderWidth = 1
         searchButton.layer.borderColor = UIColor.black.cgColor
         searchButton.layer.cornerRadius = searchButton.frame.height / 2
+    }
+
+    private func setupUI() {
+        welcomeUserLabel.text = "Hello, \(viewModel.userName)"
     }
 
 }
