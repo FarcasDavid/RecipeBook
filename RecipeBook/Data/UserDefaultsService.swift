@@ -14,7 +14,7 @@ class UserDefaultsService {
         userDefaults.set(name, forKey: UserDefaultsKeys.username.rawValue)
     }
 
-    func getUserName() -> String? {
+    func getUserName() -> String {
         let username = userDefaults.string(forKey: UserDefaultsKeys.username.rawValue)
         return username ?? ""
     }
