@@ -14,6 +14,9 @@ class NameScreenViewController: UIViewController {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var nameTextField: UITextField!
 
+    // View Model
+    var viewModel: NameScreenViewModel = NameScreenViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,8 +24,7 @@ class NameScreenViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        let launchType = UserDefaultsService()
-        if !launchType.isFirstLaunch() {
+        if viewModel.wasLaunchedBefore() {
             let storyboard = UIStoryboard(name: "HomeScreenViewController", bundle: nil)
             let homeScreenViewController =
             storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController")
@@ -36,10 +38,9 @@ class NameScreenViewController: UIViewController {
 extension NameScreenViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Save User Credentials (Name)
-        let userDefaultsName = UserDefaultsService()
+        // Update User Credentials (Name)
         if let name = nameTextField.text {
-            userDefaultsName.setUserName(name)
+            viewModel.updateUserName(name)
         }
 
         // Perform segue to Home Screen
