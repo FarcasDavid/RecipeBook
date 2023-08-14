@@ -9,7 +9,7 @@ import Foundation
 
 class HomeScreenViewModel {
 
-    let userDefaultsName = UserDefaultsService()
+    private let userDefaultsName = UserDefaultsService()
 
     var userName: String {
         return userDefaultsName.getUserName() ?? ""

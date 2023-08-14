@@ -6,7 +6,6 @@
 //
 import Foundation
 
-
 class UserDefaultsService {
 
     private let userDefaults = UserDefaults.standard

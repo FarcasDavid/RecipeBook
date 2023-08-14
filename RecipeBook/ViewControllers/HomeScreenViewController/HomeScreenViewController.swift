@@ -16,14 +16,13 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet private weak var titleMainScreenLabel: UILabel!
 
     // ViewModel:
-    var viewModel: HomeScreenViewModel = HomeScreenViewModel()
+    private var viewModel: HomeScreenViewModel = HomeScreenViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupSearchButton()
         setupUI()
-
     }
 
 }

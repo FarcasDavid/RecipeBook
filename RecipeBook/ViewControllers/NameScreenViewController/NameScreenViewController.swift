@@ -15,7 +15,7 @@ class NameScreenViewController: UIViewController {
     @IBOutlet private weak var nameTextField: UITextField!
 
     // View Model
-    var viewModel: NameScreenViewModel = NameScreenViewModel()
+   private var viewModel: NameScreenViewModel = NameScreenViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +30,8 @@ class NameScreenViewController: UIViewController {
             storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController")
             homeScreenViewController.modalPresentationStyle = .fullScreen
             present(homeScreenViewController, animated: false)
-        } else {
-            viewModel.userDefaultsProperty.setWasLaunchedBefore(true)
+        } else if !viewModel.userName.isEmpty {
+            viewModel.setWasLaunchedBefore(true)
         }
     }
 
@@ -41,16 +41,18 @@ extension NameScreenViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Update User Credentials (Name)
-        if let name = nameTextField.text {
+        if let name = nameTextField.text, !name.isEmpty {
             viewModel.setUserName(name)
-        }
+            viewModel.setWasLaunchedBefore(true)
 
-        // Perform segue to Home Screen
-        let storyboard = UIStoryboard(name: "HomeScreenViewController", bundle: nil)
-        let homeScreenViewController = storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController")
-        homeScreenViewController.modalPresentationStyle = .fullScreen
-        present(homeScreenViewController, animated: true)
-        return false
+            // Perform segue to Home Screen
+            let storyboard = UIStoryboard(name: "HomeScreenViewController", bundle: nil)
+            let homeScreenViewController =
+            storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController")
+            homeScreenViewController.modalPresentationStyle = .fullScreen
+            present(homeScreenViewController, animated: true)
+        }
+        return true
     }
 
 }

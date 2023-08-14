@@ -9,10 +9,18 @@ import Foundation
 
 class NameScreenViewModel {
 
-    let userDefaultsProperty = UserDefaultsService()
+    private let userDefaultsProperty = UserDefaultsService()
 
     var wasLaunchedBefore: Bool {
         return userDefaultsProperty.getWasLaunchedBefore()
+    }
+
+    var userName: String {
+        return userDefaultsProperty.getUserName() ?? ""
+    }
+
+    func setWasLaunchedBefore(_ launchType: Bool) {
+        userDefaultsProperty.setWasLaunchedBefore(launchType)
     }
 
     func setUserName(_ name: String) {
