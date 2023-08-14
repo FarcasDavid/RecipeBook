@@ -15,7 +15,7 @@ class NameScreenViewController: UIViewController {
     @IBOutlet private weak var nameTextField: UITextField!
 
     // View Model
-   private var viewModel: NameScreenViewModel = NameScreenViewModel()
+    private var viewModel: NameScreenViewModel = NameScreenViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()

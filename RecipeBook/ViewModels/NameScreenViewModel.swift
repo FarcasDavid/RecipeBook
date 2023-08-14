@@ -16,7 +16,7 @@ class NameScreenViewModel {
     }
 
     var userName: String {
-        return userDefaultsProperty.getUserName() ?? ""
+        return userDefaultsProperty.getUserName()
     }
 
     func setWasLaunchedBefore(_ launchType: Bool) {
