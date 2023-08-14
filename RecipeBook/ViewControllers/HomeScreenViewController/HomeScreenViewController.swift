@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class HomeScreenViewController: UIViewController {
 
@@ -14,10 +15,14 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet private weak var searchButton: UIButton!
     @IBOutlet private weak var titleMainScreenLabel: UILabel!
 
+    // ViewModel:
+    private var viewModel: HomeScreenViewModel = HomeScreenViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupSearchButton()
+        setupUI()
     }
 
 }
@@ -29,6 +34,10 @@ extension HomeScreenViewController {
         searchButton.layer.borderWidth = 1
         searchButton.layer.borderColor = UIColor.black.cgColor
         searchButton.layer.cornerRadius = searchButton.frame.height / 2
+    }
+
+    private func setupUI() {
+        welcomeUserLabel.text = "Hello, \(viewModel.userName)"
     }
 
 }
