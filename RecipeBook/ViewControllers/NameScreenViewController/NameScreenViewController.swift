@@ -24,12 +24,14 @@ class NameScreenViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        if viewModel.wasLaunchedBefore() {
+        if viewModel.wasLaunchedBefore {
             let storyboard = UIStoryboard(name: "HomeScreenViewController", bundle: nil)
             let homeScreenViewController =
             storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController")
             homeScreenViewController.modalPresentationStyle = .fullScreen
             present(homeScreenViewController, animated: false)
+        } else {
+            viewModel.userDefaultsProperty.setWasLaunchedBefore(true)
         }
     }
 

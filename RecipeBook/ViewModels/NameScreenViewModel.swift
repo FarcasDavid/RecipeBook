@@ -15,11 +15,10 @@ class NameScreenViewModel {
         userDefaultsProperty.setUserName(name)
     }
 
-    func wasLaunchedBefore() -> Bool {
+    var wasLaunchedBefore: Bool {
         if userDefaultsProperty.getWasLaunchedBefore() {
             return true
         } else {
-            userDefaultsProperty.setWasLaunchedBefore(true)
             return false
         }
     }

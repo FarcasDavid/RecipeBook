@@ -15,15 +15,18 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet private weak var searchButton: UIButton!
     @IBOutlet private weak var titleMainScreenLabel: UILabel!
 
+    // ViewModel:
+    var viewModel: HomeScreenViewModel = HomeScreenViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupSearchButton()
-        let userDefaultsName = UserDefaultsService()
-        if let username = userDefaultsName.getUserName() {
+        if let username = viewModel.userDefaultsName.getUserName() {
             welcomeUserLabel.text = "Hello, \(username)"
         }
     }
+
 }
 
 // MARK: UISetup
