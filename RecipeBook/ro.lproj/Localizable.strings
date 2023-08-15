@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  RecipeBook
+
+  Created by David Farcas on 15.08.2023.
+  
+*/
+"Hello" = "Salut";
+"What would you like to cook today?" = "Ce ai dori să gătești astăzi?";
+"What is your name?" = "Cum te numești?";
+"Enter your name here" = "Introdu numele tău aici";

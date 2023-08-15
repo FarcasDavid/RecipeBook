@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  RecipeBook
+
+  Created by David Farcas on 15.08.2023.
+  
+*/
+"Hello" = "Hello";
+"What would you like to cook today?" = "What would you like to cook today?";
+"What is your name?" = "What is your name?";
+"Enter your name here" = "Enter your name here";
