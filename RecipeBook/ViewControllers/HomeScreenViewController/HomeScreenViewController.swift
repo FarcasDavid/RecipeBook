@@ -37,7 +37,8 @@ extension HomeScreenViewController {
     }
 
     private func setupUI() {
-        welcomeUserLabel.text = "Hello, \(viewModel.userName)"
+        welcomeUserLabel.text = String(format: LocalizedStrings.helloMessage.rawValue.localized(), viewModel.userName)
+        titleMainScreenLabel.text = LocalizedStrings.descriptionCookingMessage.rawValue.localized()
     }
 
 }

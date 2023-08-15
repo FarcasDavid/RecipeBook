@@ -21,6 +21,7 @@ class NameScreenViewController: UIViewController {
         super.viewDidLoad()
 
         setupTextField()
+        setupUI()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -63,6 +64,12 @@ extension NameScreenViewController {
     private func setupTextField() {
         nameTextField.delegate = self
         nameTextField.textAlignment = .center
+        nameTextField.placeholder = LocalizedStrings.enterNamePlaceholder.rawValue.localized()
+    }
+
+    private func setupUI() {
+        nameLabel.text = LocalizedStrings.whatIsYourNameLabelMessage.rawValue.localized()
+
     }
 
 }

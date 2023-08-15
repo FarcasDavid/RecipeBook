@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  RecipeBook
+
+  Created by David Farcas on 15.08.2023.
+  
+*/
+"helloMessageKey" = "Hello, %@";
+"descriptionCookingMessageKey" = "What would you like to cook today?";
+"whatIsYourNameLabelMessageKey" = "What is your name?";
+"enterNamePlaceholderKey" = "Enter your name here";

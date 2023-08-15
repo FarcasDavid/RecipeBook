@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  RecipeBook
+
+  Created by David Farcas on 15.08.2023.
+  
+*/
+"helloMessageKey" = "Salut, %@";
+"descriptionCookingMessageKey" = "Ce ai dori să gătești astăzi?";
+"whatIsYourNameLabelMessageKey" = "Cum te numești?";
+"enterNamePlaceholderKey" = "Introdu numele tău aici";
