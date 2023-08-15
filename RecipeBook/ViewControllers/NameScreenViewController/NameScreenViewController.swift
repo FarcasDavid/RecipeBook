@@ -64,11 +64,11 @@ extension NameScreenViewController {
     private func setupTextField() {
         nameTextField.delegate = self
         nameTextField.textAlignment = .center
-        nameTextField.placeholder = NSLocalizedString("Enter your name here", comment: "")
+        nameTextField.placeholder = LocalizedStrings.enterNamePlaceholder.rawValue.localized()
     }
 
     private func setupUI() {
-        nameLabel.text = NSLocalizedString("What is your name?", comment: "")
+        nameLabel.text = LocalizedStrings.whatIsYourNameLabelMessage.rawValue.localized()
 
     }
 
