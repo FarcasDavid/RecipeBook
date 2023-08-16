@@ -23,6 +23,7 @@ class HomeScreenViewController: UIViewController {
 
         setupSearchButton()
         setupUI()
+
     }
 
 }
@@ -44,7 +45,6 @@ extension HomeScreenViewController {
 }
 
 // MARK: Actions
-
 extension HomeScreenViewController {
 
     @IBAction private func searchButtonTapped(_ sender: UIButton) {
