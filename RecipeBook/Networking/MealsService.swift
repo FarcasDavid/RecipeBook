@@ -9,7 +9,7 @@ import Foundation
 
 class MealsService: BaseURLService {
 
-    var mealsURL: String {
+   private var mealsURL: String {
         return baseURL + "filter.php?c="
     }
 
