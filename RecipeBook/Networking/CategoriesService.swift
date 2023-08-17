@@ -9,7 +9,7 @@ import Foundation
 
 class CategoriesService: BaseURLService {
 
-    var categoriesURL: String {
+   private var categoriesURL: String {
         return baseURL + "categories.php"
     }
 
