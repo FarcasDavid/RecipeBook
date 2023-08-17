@@ -12,13 +12,13 @@ class NetworkManager {
 
     static let shared = NetworkManager()
 
-    func fetchData(url: URLConvertible, completionHandler: @escaping (Result<Data, Error>) -> Void) {
+    func fetchData(url: URLConvertible, completion: @escaping (Result<Data, Error>) -> Void) {
         AF.request(url).responseData { response in
             switch response.result {
             case .success(let data):
-                completionHandler(.success(data))
+                completion(.success(data))
             case .failure(let error):
-                completionHandler(.failure(error))
+                completion(.failure(error))
             }
         }
     }
