@@ -23,7 +23,6 @@ class HomeScreenViewController: UIViewController {
 
         setupSearchButton()
         setupUI()
-
     }
 
 }
