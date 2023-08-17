@@ -13,18 +13,18 @@ class MealsService: BaseURLService {
         return baseURL + "filter.php?c="
     }
 
-    func fetchMealByCategory() {
-        NetworkManager.shared.fetchData(url: mealsURL) { result in
+    func fetchMealByCategory(_ category: String, completion: @escaping (Result<Meals, Error>) -> Void) {
+        NetworkManager.shared.fetchData(url: mealsURL + category) { result in
             switch result {
             case .success(let data):
                 do {
-                    let json = try JSONDecoder().decode(MealsModel.self, from: data)
-                    print(json.meals)
+                    let meals = try JSONDecoder().decode(Meals.self, from: data)
+                    completion(.success(meals))
                 } catch {
-                    print(error)
+                    completion(.failure(error))
                 }
             case .failure(let error):
-                print("Network request error: \(error)")
+                completion(.failure(error))
             }
         }
     }

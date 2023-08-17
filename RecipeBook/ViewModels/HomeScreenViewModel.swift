@@ -10,20 +10,19 @@ import Foundation
 class HomeScreenViewModel {
 
     private let userDefaultsName = UserDefaultsService()
+    private let categoriesService = CategoriesService()
+    private let mealsService = MealsService()
+
     var userName: String {
         return userDefaultsName.getUserName()
     }
 
-    private let categoriesService = CategoriesService()
-
-    func getMealCategories() {
-        categoriesService.fetchAllCategories()
+    func fetchAllCategories(completion: @escaping(Result<Categories, Error>) -> Void) {
+        categoriesService.fetchAllCategories(completion: completion)
     }
 
-    private let mealsService = MealsService()
-
-    func getMealByCategory() {
-        mealsService.fetchMealByCategory()
+    func fetchMealByCategory(_ category: String, completion: @escaping(Result<Meals, Error>) -> Void) {
+        mealsService.fetchMealByCategory(category, completion: completion)
     }
 
 }

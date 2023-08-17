@@ -13,18 +13,18 @@ class CategoriesService: BaseURLService {
         return baseURL + "categories.php"
     }
 
-    func fetchAllCategories() {
+    func fetchAllCategories(completion: @escaping (Result<Categories, Error>) -> Void) {
         NetworkManager.shared.fetchData(url: categoriesURL) { result in
             switch result {
             case .success(let data):
                 do {
-                    let json = try JSONDecoder().decode(RecipeMealModel.self, from: data)
-                    print(json.categories)
+                    let categories = try JSONDecoder().decode(Categories.self, from: data)
+                    completion(.success(categories))
                 } catch {
-                    print(error)
+                    completion(.failure(error))
                 }
             case .failure(let error):
-                print("Network request error: \(error)")
+                completion(.failure(error))
             }
         }
     }

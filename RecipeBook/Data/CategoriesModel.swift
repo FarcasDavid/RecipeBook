@@ -7,12 +7,10 @@
 
 import Foundation
 
-// MARK: - RecipeMealModel
-struct RecipeMealModel: Codable {
+struct Categories: Codable {
     let categories: [Category]
 }
 
-// MARK: - Category
 struct Category: Codable {
     let idCategory: String
     let strCategory: String
