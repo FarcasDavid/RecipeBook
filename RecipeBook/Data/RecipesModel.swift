@@ -14,7 +14,8 @@ struct RecipeMealModel: Codable {
 
 // MARK: - Category
 struct Category: Codable {
-    let idCategory, strCategory: String
+    let idCategory,
+        strCategory: String
     let strCategoryThumb: String
     let strCategoryDescription: String
 }

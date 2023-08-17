@@ -10,7 +10,7 @@ import Alamofire
 
 class NetworkManager {
 
-    static let shared = NetworkManager()  // Singleton instance
+    static let shared = NetworkManager()
 
     func fetchData(url: URLConvertible, completionHandler: @escaping (Result<Data, Error>) -> Void) {
         AF.request(url).responseData { response in
