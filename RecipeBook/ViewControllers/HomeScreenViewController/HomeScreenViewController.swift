@@ -44,7 +44,6 @@ extension HomeScreenViewController {
 }
 
 // MARK: Actions
-
 extension HomeScreenViewController {
 
     @IBAction private func searchButtonTapped(_ sender: UIButton) {
