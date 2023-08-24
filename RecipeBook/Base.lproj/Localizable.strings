@@ -9,3 +9,5 @@
 "descriptionCookingMessageKey" = "What would you like to cook today?";
 "whatIsYourNameLabelMessageKey" = "What is your name?";
 "enterNamePlaceholderKey" = "Enter your name here";
+"categories" = "Categories";
+"seeAll" = "See All";

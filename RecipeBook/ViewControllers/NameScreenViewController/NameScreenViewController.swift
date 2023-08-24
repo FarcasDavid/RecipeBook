@@ -25,6 +25,8 @@ class NameScreenViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
         if viewModel.wasLaunchedBefore {
             let storyboard = UIStoryboard(name: "HomeScreenViewController", bundle: nil)
             let homeScreenViewController =
