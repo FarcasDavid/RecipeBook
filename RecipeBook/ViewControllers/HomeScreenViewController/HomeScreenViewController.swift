@@ -15,8 +15,11 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet private weak var searchButton: UIButton!
     @IBOutlet private weak var titleMainScreenLabel: UILabel!
     @IBOutlet private weak var categoriesCollectionView: UICollectionView!
-    @IBOutlet private weak var categoriesLabel: UILabel!
+    @IBOutlet private weak var categoriesTitleLabel: UILabel!
     @IBOutlet private weak var seeAllCategoriesButton: UIButton!
+
+    // Variables:
+    private var categoriesCellSize = CGSize(width: 90, height: 90)
 
     // ViewModel:
     private var viewModel: HomeScreenViewModel = HomeScreenViewModel()
@@ -43,10 +46,10 @@ extension HomeScreenViewController {
     private func setupUI() {
         welcomeUserLabel.text = String(format: LocalizedStrings.helloMessage.rawValue.localized(), viewModel.userName)
         titleMainScreenLabel.text = LocalizedStrings.descriptionCookingMessage.rawValue.localized()
-        categoriesLabel.text = LocalizedStrings.categories.rawValue.localized()
+        categoriesTitleLabel.text = LocalizedStrings.categories.rawValue.localized()
         seeAllCategoriesButton.setTitle(LocalizedStrings.seeAll.rawValue.localized(), for: .normal)
 
-        self.view.backgroundColor = UIColor.systemGray6
+        view.backgroundColor = UIColor.systemGray6
     }
 
 }
@@ -60,7 +63,7 @@ extension HomeScreenViewController {
 }
 
 // MARK: Categories Collection View
-extension HomeScreenViewController: UICollectionViewDelegate {
+extension HomeScreenViewController {
 
     func setupCategoriesCollectionView() {
         categoriesCollectionView.dataSource = self
@@ -103,7 +106,7 @@ extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
         _ collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 90, height: 90)
+            return categoriesCellSize
         }
 
 }

@@ -133,7 +133,7 @@
                     </view>
                     <connections>
                         <outlet property="categoriesCollectionView" destination="NB5-th-ML8" id="rvz-41-3zH"/>
-                        <outlet property="categoriesLabel" destination="KYc-Pt-Dnr" id="jMA-0E-mV0"/>
+                        <outlet property="categoriesTitleLabel" destination="KYc-Pt-Dnr" id="rj0-yY-H3h"/>
                         <outlet property="searchButton" destination="V1R-Xl-mul" id="APq-up-mao"/>
                         <outlet property="seeAllCategoriesButton" destination="OE4-R3-wfg" id="ybX-vY-gA1"/>
                         <outlet property="titleMainScreenLabel" destination="X40-Cc-4Sy" id="UQ3-TU-WhT"/>
