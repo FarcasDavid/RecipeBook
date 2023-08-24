@@ -13,5 +13,7 @@ enum LocalizedStrings: String {
     case descriptionCookingMessage = "descriptionCookingMessageKey"
     case whatIsYourNameLabelMessage = "whatIsYourNameLabelMessageKey"
     case enterNamePlaceholder = "enterNamePlaceholderKey"
+    case categories = "categories"
+    case seeAll = "seeAll"
 
 }

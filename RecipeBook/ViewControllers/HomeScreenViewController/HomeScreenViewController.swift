@@ -14,6 +14,9 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet private weak var welcomeUserLabel: UILabel!
     @IBOutlet private weak var searchButton: UIButton!
     @IBOutlet private weak var titleMainScreenLabel: UILabel!
+    @IBOutlet private weak var categoriesCollectionView: UICollectionView!
+    @IBOutlet private weak var categoriesLabel: UILabel!
+    @IBOutlet private weak var seeAllCategoriesButton: UIButton!
 
     // ViewModel:
     private var viewModel: HomeScreenViewModel = HomeScreenViewModel()
@@ -23,6 +26,7 @@ class HomeScreenViewController: UIViewController {
 
         setupSearchButton()
         setupUI()
+        setupCategoriesCollectionView()
     }
 
 }
@@ -39,6 +43,10 @@ extension HomeScreenViewController {
     private func setupUI() {
         welcomeUserLabel.text = String(format: LocalizedStrings.helloMessage.rawValue.localized(), viewModel.userName)
         titleMainScreenLabel.text = LocalizedStrings.descriptionCookingMessage.rawValue.localized()
+        categoriesLabel.text = LocalizedStrings.categories.rawValue.localized()
+        seeAllCategoriesButton.setTitle(LocalizedStrings.seeAll.rawValue.localized(), for: .normal)
+
+        self.view.backgroundColor = UIColor.systemGray6
     }
 
 }
@@ -48,5 +56,54 @@ extension HomeScreenViewController {
 
     @IBAction private func searchButtonTapped(_ sender: UIButton) {
     }
+
+}
+
+// MARK: Categories Collection View
+extension HomeScreenViewController: UICollectionViewDelegate {
+
+    func setupCategoriesCollectionView() {
+        categoriesCollectionView.dataSource = self
+        categoriesCollectionView.delegate = self
+        categoriesCollectionView.backgroundColor = .clear
+        categoriesCollectionView.showsHorizontalScrollIndicator = false
+        categoriesCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        if let layout = categoriesCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = .horizontal
+            layout.minimumInteritemSpacing = 0
+            layout.minimumLineSpacing = 16
+            layout.sectionInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        }
+    }
+
+}
+
+extension HomeScreenViewController: UICollectionViewDataSource {
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell =
+                categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: "CategoriesCell", for: indexPath)
+                as? CategoriesCell else {
+            return UICollectionViewCell()
+        }
+       // TODO: cell setup
+        return cell
+    }
+
+}
+
+extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: 90, height: 90)
+        }
 
 }
