@@ -26,9 +26,7 @@ class NameScreenViewController: UIViewController {
         super.viewDidAppear(animated)
 
         if viewModel.wasLaunchedBefore {
-            let storyboard = UIStoryboard(name: "HomeScreenViewController", bundle: nil)
-            let homeScreenViewController =
-            storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController")
+            let homeScreenViewController = HomeScreenViewController.instantiate()
             homeScreenViewController.modalPresentationStyle = .fullScreen
             present(homeScreenViewController, animated: false)
         } else if !viewModel.userName.isEmpty {
@@ -44,9 +42,7 @@ extension NameScreenViewController: UITextFieldDelegate {
         if let name = nameTextField.text, !name.isEmpty {
             viewModel.setUserName(name)
             viewModel.setWasLaunchedBefore(true)
-            let storyboard = UIStoryboard(name: "HomeScreenViewController", bundle: nil)
-            let homeScreenViewController =
-            storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController")
+            let homeScreenViewController = HomeScreenViewController.instantiate()
             homeScreenViewController.modalPresentationStyle = .fullScreen
             present(homeScreenViewController, animated: true)
         }
