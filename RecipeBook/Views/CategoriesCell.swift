@@ -28,8 +28,8 @@ class CategoriesCell: UICollectionViewCell {
     }
 
     func setup(with category: Category) {
-        categoryTitleLabel.text = category.strCategory
-        categoryImageView.image = UIImage(named: category.strCategoryThumb)
+        categoryTitleLabel.text = category.title
+        categoryImageView.image = category.image
     }
 
     private func setup() {

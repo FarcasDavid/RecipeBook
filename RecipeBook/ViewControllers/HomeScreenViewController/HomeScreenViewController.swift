@@ -10,7 +10,6 @@ import Foundation
 
 class HomeScreenViewController: UIViewController {
 
-    // IBOutlets:
     @IBOutlet private weak var welcomeUserLabel: UILabel!
     @IBOutlet private weak var searchButton: UIButton!
     @IBOutlet private weak var titleMainScreenLabel: UILabel!
@@ -18,10 +17,7 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet private weak var categoriesTitleLabel: UILabel!
     @IBOutlet private weak var seeAllCategoriesButton: UIButton!
 
-    // Variables:
     private var categoriesCellSize = CGSize(width: 90, height: 90)
-
-    // ViewModel:
     private var viewModel: HomeScreenViewModel = HomeScreenViewModel()
 
     override func viewDidLoad() {
@@ -30,6 +26,7 @@ class HomeScreenViewController: UIViewController {
         setupSearchButton()
         setupUI()
         setupCategoriesCollectionView()
+        loadAllCategories()
     }
 
 }
@@ -62,6 +59,19 @@ extension HomeScreenViewController {
 
 }
 
+// MARK: Methods
+extension HomeScreenViewController {
+    func loadAllCategories() {
+        viewModel.fetchAllCategories { isLoaded in
+            if isLoaded {
+                DispatchQueue.main.async {
+                    self.categoriesCollectionView.reloadData()
+                }
+            }
+        }
+    }
+}
+
 // MARK: Categories Collection View
 extension HomeScreenViewController {
 
@@ -84,17 +94,20 @@ extension HomeScreenViewController {
 extension HomeScreenViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return viewModel.numberOfItemsInSection
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell =
                 categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: "CategoriesCell", for: indexPath)
-                as? CategoriesCell else {
+                as? CategoriesCell
+        else {
             return UICollectionViewCell()
         }
-       // TODO: cell setup
+
+        let category = viewModel.categories[indexPath.row]
+        cell.setup(with: category)
         return cell
     }
 

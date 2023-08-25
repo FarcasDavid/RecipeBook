@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BaseURLService {
+public class BaseURLService {
 
     let baseURL = "https://www.themealdb.com/api/json/v1/1/"
 

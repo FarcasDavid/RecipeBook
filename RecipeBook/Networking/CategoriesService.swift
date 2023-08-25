@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 class CategoriesService: BaseURLService {
 
-   private var categoriesURL: String {
+    private var categoriesURL: String {
         return baseURL + "categories.php"
     }
 
@@ -25,6 +26,21 @@ class CategoriesService: BaseURLService {
                 }
             case .failure(let error):
                 completion(.failure(error))
+            }
+        }
+    }
+
+    func downloadCategoriesImage(_ categoryImageURL: String, completion: @escaping (UIImage?) -> Void) {
+        NetworkManager.shared.fetchData(url: categoryImageURL) { [weak self] result in
+            guard self != nil else {
+                completion(nil)
+                return
+            }
+            switch result {
+            case .success(let data):
+                completion(UIImage(data: data))
+            case .failure:
+                completion(nil)
             }
         }
     }

@@ -6,14 +6,22 @@
 //
 
 import Foundation
+import UIKit
 
 struct Categories: Codable {
-    let categories: [Category]
+    let categories: [CategoryResponse]
 }
 
-struct Category: Codable {
+struct CategoryResponse: Codable {
     let idCategory: String
     let strCategory: String
     let strCategoryThumb: String
     let strCategoryDescription: String
+}
+
+struct Category {
+    let id: String
+    let title: String
+    let image: UIImage?
+    let description: String
 }
