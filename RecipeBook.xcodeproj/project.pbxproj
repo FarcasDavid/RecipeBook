@@ -25,6 +25,10 @@
 		ABACE8752A83AA04009C77EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABACE8742A83AA04009C77EE /* Assets.xcassets */; };
 		ABACE8782A83AA04009C77EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABACE8762A83AA04009C77EE /* LaunchScreen.storyboard */; };
 		ABACE8812A83AAA9009C77EE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABACE8802A83AAA9009C77EE /* .swiftlint.yml */; };
+		ABDCDCFB2A98D655005F589F /* UITableView+DequeueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDCDCF72A98D655005F589F /* UITableView+DequeueCell.swift */; };
+		ABDCDCFC2A98D655005F589F /* UIView+nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDCDCF82A98D655005F589F /* UIView+nib.swift */; };
+		ABDCDCFD2A98D655005F589F /* UICollectionView+DequeueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDCDCF92A98D655005F589F /* UICollectionView+DequeueCell.swift */; };
+		ABDCDCFE2A98D655005F589F /* UIViewController+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDCDCFA2A98D655005F589F /* UIViewController+Instantiate.swift */; };
 		ABE029B02A8E1A1E00C81CFB /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE029AF2A8E1A1E00C81CFB /* CategoriesService.swift */; };
 		ABE029B22A8E1B4300C81CFB /* MealsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE029B12A8E1B4300C81CFB /* MealsModel.swift */; };
 		ABE029B42A8E2F4D00C81CFB /* MealsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE029B32A8E2F4D00C81CFB /* MealsService.swift */; };
@@ -55,6 +59,10 @@
 		ABACE8772A83AA04009C77EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABACE8792A83AA04009C77EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABACE8802A83AAA9009C77EE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		ABDCDCF72A98D655005F589F /* UITableView+DequeueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+DequeueCell.swift"; sourceTree = "<group>"; };
+		ABDCDCF82A98D655005F589F /* UIView+nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+nib.swift"; sourceTree = "<group>"; };
+		ABDCDCF92A98D655005F589F /* UICollectionView+DequeueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DequeueCell.swift"; sourceTree = "<group>"; };
+		ABDCDCFA2A98D655005F589F /* UIViewController+Instantiate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Instantiate.swift"; sourceTree = "<group>"; };
 		ABE029AF2A8E1A1E00C81CFB /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
 		ABE029B12A8E1B4300C81CFB /* MealsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsModel.swift; sourceTree = "<group>"; };
 		ABE029B32A8E2F4D00C81CFB /* MealsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsService.swift; sourceTree = "<group>"; };
@@ -94,6 +102,10 @@
 		AB228C032A83CCDE0035043E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				ABDCDCF92A98D655005F589F /* UICollectionView+DequeueCell.swift */,
+				ABDCDCF72A98D655005F589F /* UITableView+DequeueCell.swift */,
+				ABDCDCF82A98D655005F589F /* UIView+nib.swift */,
+				ABDCDCFA2A98D655005F589F /* UIViewController+Instantiate.swift */,
 				AB73B17F2A8B8BB900615DB9 /* String+Localized.swift */,
 			);
 			path = Extensions;
@@ -340,7 +352,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB105C972A83DD8B00EAE886 /* NameScreenViewController.swift in Sources */,
+				ABDCDCFC2A98D655005F589F /* UIView+nib.swift in Sources */,
 				AB20980D2A8A3C880018172D /* HomeScreenViewModel.swift in Sources */,
+				ABDCDCFB2A98D655005F589F /* UITableView+DequeueCell.swift in Sources */,
 				AB73B1822A8B8C2D00615DB9 /* LocalizedStrings.swift in Sources */,
 				AB20980B2A8A29A00018172D /* NameScreenViewModel.swift in Sources */,
 				AB73B1882A8CE1AA00615DB9 /* NetworkManager.swift in Sources */,
@@ -348,12 +362,14 @@
 				ABE029B02A8E1A1E00C81CFB /* CategoriesService.swift in Sources */,
 				ABF5FD9C2A84CEED007AFBAC /* HomeScreenViewController.swift in Sources */,
 				AB73B1802A8B8BB900615DB9 /* String+Localized.swift in Sources */,
+				ABDCDCFE2A98D655005F589F /* UIViewController+Instantiate.swift in Sources */,
 				AB73B1862A8CB1F200615DB9 /* CategoriesModel.swift in Sources */,
 				ABACE86C2A83AA03009C77EE /* AppDelegate.swift in Sources */,
 				ABE029B42A8E2F4D00C81CFB /* MealsService.swift in Sources */,
 				ABE029B22A8E1B4300C81CFB /* MealsModel.swift in Sources */,
 				AB3BD53D2A851E7F00D44712 /* UserDefaultsService.swift in Sources */,
 				AB73B18A2A8CE73100615DB9 /* BaseURLService.swift in Sources */,
+				ABDCDCFD2A98D655005F589F /* UICollectionView+DequeueCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
