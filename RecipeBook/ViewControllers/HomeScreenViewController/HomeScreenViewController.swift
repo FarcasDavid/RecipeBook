@@ -99,13 +99,7 @@ extension HomeScreenViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell =
-                categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: "CategoriesCell", for: indexPath)
-                as? CategoriesCell
-        else {
-            return UICollectionViewCell()
-        }
-
+        let cell: CategoriesCell = categoriesCollectionView.dequeue(for: indexPath)
         let category = viewModel.categories[indexPath.row]
         cell.setup(with: category)
         return cell
