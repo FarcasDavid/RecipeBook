@@ -60,12 +60,7 @@ class HomeScreenViewModel {
         mealsService.fetchMealByCategory(category, completion: completion)
     }
 
-
-    func fetchCategoriesTitle(_ category: CategoryResponse) -> String {
-        return category.strCategory
-    }
-
-    func downloadCategoriesImage(_ categoryImageURL: String, completion: @escaping(UIImage?) -> Void) {
+    private func downloadCategoriesImage(_ categoryImageURL: String, completion: @escaping(UIImage?) -> Void) {
         categoriesService.downloadCategoriesImage(categoryImageURL, completion: completion)
     }
 

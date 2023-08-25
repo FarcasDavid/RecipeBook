@@ -13,8 +13,6 @@ class CategoriesCell: UICollectionViewCell {
     @IBOutlet private weak var categoryImageView: UIImageView!
     @IBOutlet private weak var categoryTitleLabel: UILabel!
 
-    static let reuseIdentifier = "CategoriesCell"
-
     override init(frame: CGRect) {
         super.init(frame: frame)
 
