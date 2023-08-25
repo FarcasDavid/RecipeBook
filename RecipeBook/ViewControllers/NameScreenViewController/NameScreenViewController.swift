@@ -10,11 +10,9 @@ import UIKit
 
 class NameScreenViewController: UIViewController {
 
-    // IBOutlets
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var nameTextField: UITextField!
 
-    // View Model
     private var viewModel: NameScreenViewModel = NameScreenViewModel()
 
     override func viewDidLoad() {
@@ -43,12 +41,9 @@ class NameScreenViewController: UIViewController {
 extension NameScreenViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Update User Credentials (Name)
         if let name = nameTextField.text, !name.isEmpty {
             viewModel.setUserName(name)
             viewModel.setWasLaunchedBefore(true)
-
-            // Perform segue to Home Screen
             let storyboard = UIStoryboard(name: "HomeScreenViewController", bundle: nil)
             let homeScreenViewController =
             storyboard.instantiateViewController(withIdentifier: "HomeScreenViewController")

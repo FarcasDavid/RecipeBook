@@ -13,8 +13,6 @@ class CategoriesCell: UICollectionViewCell {
     @IBOutlet private weak var categoryImageView: UIImageView!
     @IBOutlet private weak var categoryTitleLabel: UILabel!
 
-    static let reuseIdentifier = "CategoriesCell"
-
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -28,8 +26,8 @@ class CategoriesCell: UICollectionViewCell {
     }
 
     func setup(with category: Category) {
-        categoryTitleLabel.text = category.strCategory
-        categoryImageView.image = UIImage(named: category.strCategoryThumb)
+        categoryTitleLabel.text = category.title
+        categoryImageView.image = category.image
     }
 
     private func setup() {

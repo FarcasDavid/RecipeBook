@@ -79,7 +79,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DND-cv-XoE">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DND-cv-XoE">
                                                     <rect key="frame" x="2" y="66" width="86" height="18"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                     <nil key="textColor"/>
@@ -103,8 +103,8 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="90" height="90"/>
                                         <connections>
-                                            <outlet property="categoryImageView" destination="mfr-9k-bkf" id="SZV-Wf-8o6"/>
-                                            <outlet property="categoryTitleLabel" destination="DND-cv-XoE" id="vKe-To-3hv"/>
+                                            <outlet property="categoryImageView" destination="mfr-9k-bkf" id="8De-lu-I3l"/>
+                                            <outlet property="categoryTitleLabel" destination="DND-cv-XoE" id="wZ1-Qh-sWa"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
