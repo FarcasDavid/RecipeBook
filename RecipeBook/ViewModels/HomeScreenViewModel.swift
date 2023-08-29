@@ -20,8 +20,13 @@ class HomeScreenViewModel {
         return userDefaultsName.getUserName()
     }
 
-    var numberOfItemsInSection: Int {
+    var categoriesNumberOfItemsInSection: Int {
         return categories.count <= 5 ? categories.count : 5
+    }
+
+    var recommendationsNumberOfItemsInSection: Int {
+//        return recommendations.count <= 5 ? recommendations.count : 5
+        return 5
     }
 
     func fetchAllCategories(completion: @escaping (Bool) -> Void) {
