@@ -17,7 +17,7 @@ class HomeScreenViewController: UIViewController {
     @IBOutlet private weak var categoriesTitleLabel: UILabel!
     @IBOutlet private weak var seeAllCategoriesButton: UIButton!
     @IBOutlet private weak var recommendationsCollectionView: UICollectionView!
-    @IBOutlet private weak var seeAllRecommendationsLabel: UIButton!
+    @IBOutlet private weak var seeAllRecommendationsButton: UIButton!
     @IBOutlet private weak var recommendationsTitleLabel: UILabel!
 
 
@@ -31,8 +31,8 @@ class HomeScreenViewController: UIViewController {
         setupSearchButton()
         setupUI()
         setupCategoriesCollectionView()
-        loadAllCategories()
         setupRecommendationsCollectionView()
+        loadAllCategories()
     }
 
 }
@@ -52,7 +52,7 @@ extension HomeScreenViewController {
         categoriesTitleLabel.text = LocalizedStrings.categoriesTitleLabel.rawValue.localized()
         seeAllCategoriesButton.setTitle(LocalizedStrings.seeAllButton.rawValue.localized(), for: .normal)
         recommendationsTitleLabel.text = LocalizedStrings.recommendationsTitleLabel.rawValue.localized()
-        seeAllRecommendationsLabel.setTitle(LocalizedStrings.seeAllButton.rawValue.localized(), for: .normal)
+        seeAllRecommendationsButton.setTitle(LocalizedStrings.seeAllButton.rawValue.localized(), for: .normal)
 
         view.backgroundColor = UIColor.systemGray6
     }
@@ -122,25 +122,29 @@ extension HomeScreenViewController: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int) -> Int {
-            if collectionView == self.categoriesCollectionView {
-
+            if collectionView == categoriesCollectionView {
                 return viewModel.categoriesNumberOfItemsInSection
             }
-            return viewModel.recommendationsNumberOfItemsInSection
+            if collectionView == recommendationsCollectionView {
+                return viewModel.recommendationsNumberOfItemsInSection
+            }
+            return 0
         }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == self.categoriesCollectionView {
+        if collectionView == categoriesCollectionView {
             let cell: CategoriesCell = categoriesCollectionView.dequeue(for: indexPath)
             let category = viewModel.categories[indexPath.row]
             cell.setup(with: category)
             return cell
-        } else {
+        }
+        if collectionView == recommendationsCollectionView {
             let cell: RecommendationsCell = recommendationsCollectionView.dequeue(for: indexPath)
             // cell setup
             return cell
         }
+        return UICollectionViewCell()
     }
 
 }
@@ -151,10 +155,13 @@ extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
         _ collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath) -> CGSize {
-            if collectionView == self.categoriesCollectionView {
+            if collectionView == categoriesCollectionView {
                 return categoriesCellSize
             }
-            return recommendationsCellSize
+            if collectionView == recommendationsCollectionView {
+                return recommendationsCellSize
+            }
+            return CGSize()
         }
 
 }

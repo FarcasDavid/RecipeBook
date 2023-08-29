@@ -15,6 +15,7 @@ class HomeScreenViewModel {
     private let mealsService = MealsService()
 
     var categories = [Category]()
+    var recommendations = [Meal]()
 
     var userName: String {
         return userDefaultsName.getUserName()
@@ -25,8 +26,7 @@ class HomeScreenViewModel {
     }
 
     var recommendationsNumberOfItemsInSection: Int {
-//        return recommendations.count <= 5 ? recommendations.count : 5
-        return 5
+        return recommendations.count <= 5 ? recommendations.count : 5
     }
 
     func fetchAllCategories(completion: @escaping (Bool) -> Void) {

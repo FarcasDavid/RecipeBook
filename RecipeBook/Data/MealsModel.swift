@@ -8,10 +8,10 @@
 import Foundation
 
 struct Meals: Codable {
-    let meals: [Meal]
+    let meals: [MealResponse]
 }
 
-struct Meal: Codable {
+struct MealResponse: Codable {
     let idMeal: String
     let strMeal: String
     let strDrinkAlternate: String?
@@ -61,4 +61,7 @@ struct Meal: Codable {
     let strMeasure18: String?
     let strMeasure19: String?
     let strMeasure20: String?
+}
+
+struct Meal {
 }
