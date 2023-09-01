@@ -32,7 +32,7 @@ class HomeScreenViewController: UIViewController {
         setupUI()
         setupCategoriesCollectionView()
         setupRecommendationsCollectionView()
-        loadAllCategories()
+        loadAllData()
     }
 
 }
@@ -69,15 +69,24 @@ extension HomeScreenViewController {
 
 // MARK: Methods
 extension HomeScreenViewController {
-    func loadAllCategories() {
+
+    func loadAllData() {
         viewModel.fetchAllCategories { isLoaded in
             if isLoaded {
                 DispatchQueue.main.async {
                     self.categoriesCollectionView.reloadData()
                 }
+                self.viewModel.fetchAllMeals { isLoaded in
+                    if isLoaded {
+                        DispatchQueue.main.async {
+                            self.recommendationsCollectionView.reloadData()
+                        }
+                    }
+                }
             }
         }
     }
+
 }
 
 // MARK: Categories Collection View
@@ -141,7 +150,8 @@ extension HomeScreenViewController: UICollectionViewDataSource {
         }
         if collectionView == recommendationsCollectionView {
             let cell: RecommendationsCell = recommendationsCollectionView.dequeue(for: indexPath)
-            // cell setup
+            let meal = viewModel.recommendations[indexPath.row]
+            cell.setup(with: meal)
             return cell
         }
         return UICollectionViewCell()

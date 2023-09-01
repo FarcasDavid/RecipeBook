@@ -26,7 +26,10 @@ class RecommendationsCell: UICollectionViewCell {
         setup()
     }
 
-    func setup(with category: Category) {
+    func setup(with recommendations: Recommendations) {
+        recommendationsImageView.image = recommendations.image
+        recommendationsTitleLabel.text = recommendations.title
+        recommendationsCategoryLabel.text = recommendations.category
     }
 
     private func setup() {

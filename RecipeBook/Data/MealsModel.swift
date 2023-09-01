@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Meals: Codable {
     let meals: [MealResponse]
@@ -18,7 +19,7 @@ struct MealResponse: Codable {
     let strCategory: String?
     let strArea: String?
     let strInstructions: String?
-    let strMealThumb: String?
+    let strMealThumb: String
     let strTags: String?
     let strYoutube: String?
     let strIngredient1: String?
@@ -63,5 +64,9 @@ struct MealResponse: Codable {
     let strMeasure20: String?
 }
 
-struct Meal {
+struct Recommendations {
+    let id: String
+    let title: String
+    let image: UIImage?
+    let category: String
 }
