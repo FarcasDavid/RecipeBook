@@ -26,7 +26,7 @@ class RecommendationsCell: UICollectionViewCell {
         setup()
     }
 
-    func setup(with recommendations: Recommendations) {
+    func setup(with recommendations: MealRecommendations) {
         recommendationsImageView.image = recommendations.image
         recommendationsTitleLabel.text = recommendations.title
         recommendationsCategoryLabel.text = recommendations.category

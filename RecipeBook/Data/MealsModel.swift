@@ -19,7 +19,7 @@ struct MealResponse: Codable {
     let strCategory: String?
     let strArea: String?
     let strInstructions: String?
-    let strMealThumb: String
+    let strMealThumb: String?
     let strTags: String?
     let strYoutube: String?
     let strIngredient1: String?
@@ -64,7 +64,7 @@ struct MealResponse: Codable {
     let strMeasure20: String?
 }
 
-struct Recommendations {
+struct MealRecommendations {
     let id: String
     let title: String
     let image: UIImage?

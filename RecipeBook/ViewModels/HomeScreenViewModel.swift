@@ -6,13 +6,13 @@ class HomeScreenViewModel {
     private let categoriesService = CategoriesService()
     private let mealsService = MealsService()
     private let serialQueue = DispatchQueue(label: "serialQueue")
-    private let overallGroup = DispatchGroup()
-    private let mealGroup = DispatchGroup()
+    private let dispatchGroup = DispatchGroup()
+    private let mealDispatchGroup = DispatchGroup()
     private var currentCategoryIndex = 0
 
 
     var categories = [Category]()
-    var recommendations = [Recommendations]()
+    var recommendations = [MealRecommendations]()
 
     var userName: String {
         return userDefaultsName.getUserName()
@@ -87,7 +87,7 @@ class HomeScreenViewModel {
 
             let category = categories[currentCategoryIndex]
             serialQueue.async {
-                self.overallGroup.enter()
+                self.dispatchGroup.enter()
                 self.fetchMealByCategory(category.title) { [weak self] result in
                     guard let self = self else {
                         return
@@ -96,25 +96,25 @@ class HomeScreenViewModel {
                     switch result {
                     case .success(let meals):
                         for meal in meals.meals {
-                            self.mealGroup.enter()
-                            self.downloadImage(meal.strMealThumb) { image in
-                                let recommendationsModel = Recommendations(
+                            self.mealDispatchGroup.enter()
+                            self.downloadImage(meal.strMealThumb ?? "") { image in
+                                let recommendationsModel = MealRecommendations(
                                     id: meal.idMeal,
                                     title: meal.strMeal,
                                     image: image,
                                     category: category.title
                                 )
                                 self.recommendations.append(recommendationsModel)
-                                self.mealGroup.leave()
+                                self.mealDispatchGroup.leave()
                             }
                         }
-                        mealGroup.notify(queue: serialQueue) {
+                        mealDispatchGroup.notify(queue: serialQueue) {
                             self.currentCategoryIndex += 1
                             processNextCategory()
-                            self.overallGroup.leave()
+                            self.dispatchGroup.leave()
                         }
                     case .failure:
-                        self.overallGroup.leave()
+                        self.dispatchGroup.leave()
                     }
                 }
             }
@@ -125,4 +125,5 @@ class HomeScreenViewModel {
     private func downloadImage(_ imageURL: String, completion: @escaping(UIImage?) -> Void) {
         categoriesService.downloadImage(imageURL, completion: completion)
     }
+
 }
