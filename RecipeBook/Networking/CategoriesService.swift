@@ -30,8 +30,8 @@ class CategoriesService: BaseURLService {
         }
     }
 
-    func downloadCategoriesImage(_ categoryImageURL: String, completion: @escaping (UIImage?) -> Void) {
-        NetworkManager.shared.fetchData(url: categoryImageURL) { [weak self] result in
+    func downloadImage(_ imageURL: String, completion: @escaping (UIImage?) -> Void) {
+        NetworkManager.shared.fetchData(url: imageURL) { [weak self] result in
             guard self != nil else {
                 completion(nil)
                 return
