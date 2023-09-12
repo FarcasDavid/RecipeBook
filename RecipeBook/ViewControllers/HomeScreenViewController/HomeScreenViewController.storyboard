@@ -93,9 +93,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DND-cv-XoE">
-                                                    <rect key="frame" x="2" y="66" width="86" height="18"/>
+                                                    <rect key="frame" x="4" y="66" width="82" height="18"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mfr-9k-bkf">
@@ -108,9 +107,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="mfr-9k-bkf" firstAttribute="top" secondItem="PoZ-jr-wPc" secondAttribute="top" constant="8" id="6fU-DG-o8K"/>
-                                                <constraint firstItem="DND-cv-XoE" firstAttribute="leading" secondItem="PoZ-jr-wPc" secondAttribute="leading" constant="2" id="85q-hi-eCy"/>
+                                                <constraint firstItem="DND-cv-XoE" firstAttribute="leading" secondItem="PoZ-jr-wPc" secondAttribute="leading" constant="4" id="85q-hi-eCy"/>
                                                 <constraint firstItem="mfr-9k-bkf" firstAttribute="centerX" secondItem="PoZ-jr-wPc" secondAttribute="centerX" id="Swe-Uy-MCZ"/>
-                                                <constraint firstAttribute="trailing" secondItem="DND-cv-XoE" secondAttribute="trailing" constant="2" id="eJa-Q2-vQx"/>
+                                                <constraint firstAttribute="trailing" secondItem="DND-cv-XoE" secondAttribute="trailing" constant="4" id="eJa-Q2-vQx"/>
                                                 <constraint firstItem="DND-cv-XoE" firstAttribute="top" secondItem="mfr-9k-bkf" secondAttribute="bottom" constant="8" id="kiS-5P-ia6"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -158,7 +157,6 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5se-ca-zzJ">
                                                     <rect key="frame" x="4" y="208" width="142" height="18"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                    <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -211,6 +209,7 @@
                             <constraint firstItem="KYc-Pt-Dnr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="wul-0w-xhD"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ar3-zm-fev"/>
                     <connections>
                         <outlet property="categoriesCollectionView" destination="NB5-th-ML8" id="rvz-41-3zH"/>
                         <outlet property="categoriesTitleLabel" destination="KYc-Pt-Dnr" id="rj0-yY-H3h"/>
@@ -221,11 +220,22 @@
                         <outlet property="seeAllRecommendationsButton" destination="tSj-PQ-1fv" id="qgn-nU-QqY"/>
                         <outlet property="titleMainScreenLabel" destination="X40-Cc-4Sy" id="UQ3-TU-WhT"/>
                         <outlet property="welcomeUserLabel" destination="lE8-Tl-adb" id="Vh8-Jf-ewb"/>
+                        <segue destination="ztf-jt-GDE" kind="show" identifier="goToCategoriesScreen" id="1xj-wG-Wxv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.69465648854961" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="2919.8473282442746" y="4.9295774647887329"/>
+        </scene>
+        <!--CategoriesScreen-->
+        <scene sceneID="eur-bY-6hY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CategoriesScreenViewController" referencedIdentifier="CategoriesScreenViewController" id="ztf-jt-GDE" userLabel="CategoriesScreen" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9u8-Gm-END"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBI-N2-4qg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3799.2366412213737" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>

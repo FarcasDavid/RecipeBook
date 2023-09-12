@@ -33,6 +33,16 @@ class HomeScreenViewController: UIViewController {
         setupCategoriesCollectionView()
         setupRecommendationsCollectionView()
         loadAllData()
+
+    }
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+            categoriesCollectionView.reloadData()
+            recommendationsCollectionView.reloadData()
+        }
     }
 
 }
@@ -173,5 +183,36 @@ extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
             }
             return CGSize()
         }
+
+}
+
+extension HomeScreenViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == categoriesCollectionView {
+            jumpToCategoryDetails()
+        }
+    }
+
+    func jumpToCategoryDetails() {
+        performSegue(withIdentifier: "goToCategoriesScreen", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToCategoriesScreen" {
+            if let selectedIndexPath = categoriesCollectionView.indexPathsForSelectedItems?.first,
+               let categoriesScreenViewController = segue.destination as? CategoriesScreenViewController {
+                categoriesScreenViewController.modalPresentationStyle = .fullScreen
+                let selectedCategory = viewModel.categories[selectedIndexPath.row]
+                categoriesScreenViewController.titleText = selectedCategory.title
+                categoriesScreenViewController.descriptionText = selectedCategory.description
+                categoriesScreenViewController.image = selectedCategory.image
+                for meal in viewModel.recommendations where meal.category == selectedCategory.title {
+                    categoriesScreenViewController.meal.append(meal)
+                }
+            }
+        }
+    }
+
 
 }

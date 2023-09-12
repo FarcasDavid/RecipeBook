@@ -14,6 +14,7 @@
 		AB20980B2A8A29A00018172D /* NameScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB20980A2A8A29A00018172D /* NameScreenViewModel.swift */; };
 		AB20980D2A8A3C880018172D /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB20980C2A8A3C880018172D /* HomeScreenViewModel.swift */; };
 		AB2098162A8B76840018172D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB2098142A8B76840018172D /* Localizable.strings */; };
+		AB3044AB2AA5DA6200226496 /* CategoriesScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3044AA2AA5DA6200226496 /* CategoriesScreenViewModel.swift */; };
 		AB3BD53D2A851E7F00D44712 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3BD53C2A851E7F00D44712 /* UserDefaultsService.swift */; };
 		AB73B1802A8B8BB900615DB9 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73B17F2A8B8BB900615DB9 /* String+Localized.swift */; };
 		AB73B1822A8B8C2D00615DB9 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73B1812A8B8C2D00615DB9 /* LocalizedStrings.swift */; };
@@ -21,11 +22,15 @@
 		AB73B1882A8CE1AA00615DB9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73B1872A8CE1AA00615DB9 /* NetworkManager.swift */; };
 		AB73B18A2A8CE73100615DB9 /* BaseURLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73B1892A8CE73100615DB9 /* BaseURLService.swift */; };
 		AB7DA9732A94A7AD001B664D /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7DA9722A94A7AD001B664D /* CategoriesCell.swift */; };
+		AB9C195B2AA5C38700EE765F /* CategoriesScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9C195A2AA5C38700EE765F /* CategoriesScreenViewController.swift */; };
+		AB9C195D2AA5C39E00EE765F /* CategoriesScreenViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB9C195C2AA5C39E00EE765F /* CategoriesScreenViewController.storyboard */; };
 		AB9E73882A98EA9300466DD3 /* RecommendationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E73872A98EA9300466DD3 /* RecommendationsCell.swift */; };
 		ABACE86C2A83AA03009C77EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABACE86B2A83AA03009C77EE /* AppDelegate.swift */; };
 		ABACE8752A83AA04009C77EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABACE8742A83AA04009C77EE /* Assets.xcassets */; };
 		ABACE8782A83AA04009C77EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABACE8762A83AA04009C77EE /* LaunchScreen.storyboard */; };
 		ABACE8812A83AAA9009C77EE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABACE8802A83AAA9009C77EE /* .swiftlint.yml */; };
+		ABC7E4322AAF193300E273E7 /* MealsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7E4302AAF193300E273E7 /* MealsCell.swift */; };
+		ABC7E4332AAF193300E273E7 /* MealsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC7E4312AAF193300E273E7 /* MealsCell.xib */; };
 		ABDCDCFB2A98D655005F589F /* UITableView+DequeueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDCDCF72A98D655005F589F /* UITableView+DequeueCell.swift */; };
 		ABDCDCFC2A98D655005F589F /* UIView+nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDCDCF82A98D655005F589F /* UIView+nib.swift */; };
 		ABDCDCFD2A98D655005F589F /* UICollectionView+DequeueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDCDCF92A98D655005F589F /* UICollectionView+DequeueCell.swift */; };
@@ -33,6 +38,8 @@
 		ABE029B02A8E1A1E00C81CFB /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE029AF2A8E1A1E00C81CFB /* CategoriesService.swift */; };
 		ABE029B22A8E1B4300C81CFB /* MealsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE029B12A8E1B4300C81CFB /* MealsModel.swift */; };
 		ABE029B42A8E2F4D00C81CFB /* MealsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE029B32A8E2F4D00C81CFB /* MealsService.swift */; };
+		ABF0DD092AB047D700879C00 /* UILabel+ReadMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF0DD082AB047D700879C00 /* UILabel+ReadMore.swift */; };
+		ABF0DD0B2AB04C1200879C00 /* UITapGestureRecognizer+didTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF0DD0A2AB04C1200879C00 /* UITapGestureRecognizer+didTap.swift */; };
 		ABF5FD9C2A84CEED007AFBAC /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF5FD9A2A84CEED007AFBAC /* HomeScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +54,7 @@
 		AB20980E2A8B74BF0018172D /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		AB2098152A8B76840018172D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = RecipeBook/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB2098172A8B76940018172D /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = RecipeBook/ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AB3044AA2AA5DA6200226496 /* CategoriesScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesScreenViewModel.swift; sourceTree = "<group>"; };
 		AB3BD53C2A851E7F00D44712 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		AB73B17F2A8B8BB900615DB9 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		AB73B1812A8B8C2D00615DB9 /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
@@ -54,6 +62,8 @@
 		AB73B1872A8CE1AA00615DB9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AB73B1892A8CE73100615DB9 /* BaseURLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseURLService.swift; sourceTree = "<group>"; };
 		AB7DA9722A94A7AD001B664D /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
+		AB9C195A2AA5C38700EE765F /* CategoriesScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesScreenViewController.swift; sourceTree = "<group>"; };
+		AB9C195C2AA5C39E00EE765F /* CategoriesScreenViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoriesScreenViewController.storyboard; sourceTree = "<group>"; };
 		AB9E73872A98EA9300466DD3 /* RecommendationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsCell.swift; sourceTree = "<group>"; };
 		ABACE8682A83AA03009C77EE /* RecipeBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABACE86B2A83AA03009C77EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +71,8 @@
 		ABACE8772A83AA04009C77EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABACE8792A83AA04009C77EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABACE8802A83AAA9009C77EE /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		ABC7E4302AAF193300E273E7 /* MealsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsCell.swift; sourceTree = "<group>"; };
+		ABC7E4312AAF193300E273E7 /* MealsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealsCell.xib; sourceTree = "<group>"; };
 		ABDCDCF72A98D655005F589F /* UITableView+DequeueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+DequeueCell.swift"; sourceTree = "<group>"; };
 		ABDCDCF82A98D655005F589F /* UIView+nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+nib.swift"; sourceTree = "<group>"; };
 		ABDCDCF92A98D655005F589F /* UICollectionView+DequeueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DequeueCell.swift"; sourceTree = "<group>"; };
@@ -68,6 +80,8 @@
 		ABE029AF2A8E1A1E00C81CFB /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
 		ABE029B12A8E1B4300C81CFB /* MealsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsModel.swift; sourceTree = "<group>"; };
 		ABE029B32A8E2F4D00C81CFB /* MealsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsService.swift; sourceTree = "<group>"; };
+		ABF0DD082AB047D700879C00 /* UILabel+ReadMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+ReadMore.swift"; sourceTree = "<group>"; };
+		ABF0DD0A2AB04C1200879C00 /* UITapGestureRecognizer+didTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITapGestureRecognizer+didTap.swift"; sourceTree = "<group>"; };
 		ABF5FD9A2A84CEED007AFBAC /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		B98A303049C07C1F769F8875 /* Pods-RecipeBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipeBook.release.xcconfig"; path = "Target Support Files/Pods-RecipeBook/Pods-RecipeBook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +123,8 @@
 				ABDCDCF82A98D655005F589F /* UIView+nib.swift */,
 				ABDCDCFA2A98D655005F589F /* UIViewController+Instantiate.swift */,
 				AB73B17F2A8B8BB900615DB9 /* String+Localized.swift */,
+				ABF0DD082AB047D700879C00 /* UILabel+ReadMore.swift */,
+				ABF0DD0A2AB04C1200879C00 /* UITapGestureRecognizer+didTap.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -138,6 +154,7 @@
 		AB228C062A83CD460035043E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ABC7E4342AAF193700E273E7 /* MealsCell */,
 				AB7DA9722A94A7AD001B664D /* CategoriesCell.swift */,
 				AB9E73872A98EA9300466DD3 /* RecommendationsCell.swift */,
 			);
@@ -147,6 +164,7 @@
 		AB228C072A83CD4D0035043E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AB9C195E2AA5C3A300EE765F /* CategoriesScreenViewController */,
 				ABF5FD992A84CED3007AFBAC /* HomeScreenViewController */,
 				AB940D642A83E02A00C8A0FB /* NameScreenViewController */,
 			);
@@ -158,6 +176,7 @@
 			children = (
 				AB20980A2A8A29A00018172D /* NameScreenViewModel.swift */,
 				AB20980C2A8A3C880018172D /* HomeScreenViewModel.swift */,
+				AB3044AA2AA5DA6200226496 /* CategoriesScreenViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -169,6 +188,15 @@
 				AB105C962A83DD8B00EAE886 /* NameScreenViewController.xib */,
 			);
 			path = NameScreenViewController;
+			sourceTree = "<group>";
+		};
+		AB9C195E2AA5C3A300EE765F /* CategoriesScreenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB9C195A2AA5C38700EE765F /* CategoriesScreenViewController.swift */,
+				AB9C195C2AA5C39E00EE765F /* CategoriesScreenViewController.storyboard */,
+			);
+			path = CategoriesScreenViewController;
 			sourceTree = "<group>";
 		};
 		ABACE85F2A83AA03009C77EE = {
@@ -206,6 +234,15 @@
 				ABACE8762A83AA04009C77EE /* LaunchScreen.storyboard */,
 			);
 			path = RecipeBook;
+			sourceTree = "<group>";
+		};
+		ABC7E4342AAF193700E273E7 /* MealsCell */ = {
+			isa = PBXGroup;
+			children = (
+				ABC7E4302AAF193300E273E7 /* MealsCell.swift */,
+				ABC7E4312AAF193300E273E7 /* MealsCell.xib */,
+			);
+			path = MealsCell;
 			sourceTree = "<group>";
 		};
 		ABF5FD992A84CED3007AFBAC /* HomeScreenViewController */ = {
@@ -279,9 +316,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC7E4332AAF193300E273E7 /* MealsCell.xib in Resources */,
 				ABACE8812A83AAA9009C77EE /* .swiftlint.yml in Resources */,
 				AB2098162A8B76840018172D /* Localizable.strings in Resources */,
 				AB105C982A83DD8B00EAE886 /* NameScreenViewController.xib in Resources */,
+				AB9C195D2AA5C39E00EE765F /* CategoriesScreenViewController.storyboard in Resources */,
 				ABACE8782A83AA04009C77EE /* LaunchScreen.storyboard in Resources */,
 				AB14BC752A84F43000A94B45 /* HomeScreenViewController.storyboard in Resources */,
 				ABACE8752A83AA04009C77EE /* Assets.xcassets in Resources */,
@@ -358,19 +397,24 @@
 				ABDCDCFC2A98D655005F589F /* UIView+nib.swift in Sources */,
 				AB20980D2A8A3C880018172D /* HomeScreenViewModel.swift in Sources */,
 				ABDCDCFB2A98D655005F589F /* UITableView+DequeueCell.swift in Sources */,
+				ABF0DD0B2AB04C1200879C00 /* UITapGestureRecognizer+didTap.swift in Sources */,
 				AB73B1822A8B8C2D00615DB9 /* LocalizedStrings.swift in Sources */,
 				AB20980B2A8A29A00018172D /* NameScreenViewModel.swift in Sources */,
+				AB3044AB2AA5DA6200226496 /* CategoriesScreenViewModel.swift in Sources */,
 				AB73B1882A8CE1AA00615DB9 /* NetworkManager.swift in Sources */,
 				AB7DA9732A94A7AD001B664D /* CategoriesCell.swift in Sources */,
 				ABE029B02A8E1A1E00C81CFB /* CategoriesService.swift in Sources */,
 				ABF5FD9C2A84CEED007AFBAC /* HomeScreenViewController.swift in Sources */,
+				ABF0DD092AB047D700879C00 /* UILabel+ReadMore.swift in Sources */,
 				AB73B1802A8B8BB900615DB9 /* String+Localized.swift in Sources */,
+				AB9C195B2AA5C38700EE765F /* CategoriesScreenViewController.swift in Sources */,
 				ABDCDCFE2A98D655005F589F /* UIViewController+Instantiate.swift in Sources */,
 				AB9E73882A98EA9300466DD3 /* RecommendationsCell.swift in Sources */,
 				AB73B1862A8CB1F200615DB9 /* CategoriesModel.swift in Sources */,
 				ABACE86C2A83AA03009C77EE /* AppDelegate.swift in Sources */,
 				ABE029B42A8E2F4D00C81CFB /* MealsService.swift in Sources */,
 				ABE029B22A8E1B4300C81CFB /* MealsModel.swift in Sources */,
+				ABC7E4322AAF193300E273E7 /* MealsCell.swift in Sources */,
 				AB3BD53D2A851E7F00D44712 /* UserDefaultsService.swift in Sources */,
 				AB73B18A2A8CE73100615DB9 /* BaseURLService.swift in Sources */,
 				ABDCDCFD2A98D655005F589F /* UICollectionView+DequeueCell.swift in Sources */,

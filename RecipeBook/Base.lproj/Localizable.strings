@@ -12,3 +12,8 @@
 "categoriesTitleLabelKey" = "Categories";
 "seeAllButtonKey" = "See All";
 "recommendationsTitleLabelKey" = "Recommendations";
+"categoryDescriptionTitleLabelKey" = "Description";
+"mealsTitleLabelKey" = "Recipes";
+"backButtonTitleKey" = "Back";
+"readMoreLabelKey" = "...Read More";
+"readLessLabelKey" = "Read Less";
