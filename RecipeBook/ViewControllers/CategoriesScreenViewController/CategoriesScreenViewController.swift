@@ -17,6 +17,7 @@ class CategoriesScreenViewController: UIViewController {
     @IBOutlet private weak var mealsTitleLabel: UILabel!
     @IBOutlet private weak var mealsTableView: UITableView!
     @IBOutlet private weak var backButton: UIButton!
+    private var cellHeight: CGFloat = 140
 
     // Category details passed from HomeScreenVC
     var titleText: String?
@@ -77,12 +78,24 @@ class CategoriesScreenViewController: UIViewController {
 extension CategoriesScreenViewController: UITableViewDelegate {
 
     func setupTableView() {
+        var totalHeight = CGFloat(meal.count) * cellHeight
         mealsTableView.dataSource = self
         mealsTableView.delegate = self
         mealsTableView.backgroundColor = .clear
         let nib = UINib(nibName: "MealsCell", bundle: nil)
         mealsTableView.register(nib, forCellReuseIdentifier: "MealsCell")
         mealsTableView.layer.cornerRadius = 16
+        mealsTableView.isScrollEnabled = false
+        let heightConstraint = NSLayoutConstraint(
+            item: mealsTableView as Any,
+            attribute: .height,
+            relatedBy: .equal,
+            toItem: nil,
+            attribute: .notAnAttribute,
+            multiplier: 1.0,
+            constant: totalHeight
+        )
+        heightConstraint.isActive = true
     }
 
 }
@@ -100,7 +113,7 @@ extension CategoriesScreenViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+        return cellHeight
     }
 
 }
