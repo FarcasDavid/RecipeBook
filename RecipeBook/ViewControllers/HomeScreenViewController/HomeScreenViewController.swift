@@ -33,6 +33,16 @@ class HomeScreenViewController: UIViewController {
         setupCategoriesCollectionView()
         setupRecommendationsCollectionView()
         loadAllData()
+
+    }
+
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
+            categoriesCollectionView.reloadData()
+            recommendationsCollectionView.reloadData()
+        }
     }
 
 }
@@ -173,5 +183,35 @@ extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
             }
             return CGSize()
         }
+
+}
+
+extension HomeScreenViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == categoriesCollectionView {
+            jumpToCategoryDetails()
+        }
+    }
+
+    func jumpToCategoryDetails() {
+        performSegue(withIdentifier: "goToCategoryDetails", sender: nil)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToCategoryDetails" {
+            if let selectedIndexPath = categoriesCollectionView.indexPathsForSelectedItems?.first,
+               let categoryDetailsViewController = segue.destination as? CategoryDetailsViewController {
+                categoryDetailsViewController.modalPresentationStyle = .fullScreen
+                let selectedCategory = viewModel.categories[selectedIndexPath.row]
+                categoryDetailsViewController.titleText = selectedCategory.title
+                categoryDetailsViewController.descriptionText = selectedCategory.description
+                categoryDetailsViewController.image = selectedCategory.image
+                for meal in viewModel.recommendations where meal.category == selectedCategory.title {
+                    categoryDetailsViewController.meal.append(meal)
+                }
+            }
+        }
+    }
 
 }

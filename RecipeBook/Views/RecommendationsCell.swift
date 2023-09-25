@@ -34,7 +34,7 @@ class RecommendationsCell: UICollectionViewCell {
 
     private func setup() {
         contentView.layer.cornerRadius = 16
-        contentView.layer.backgroundColor = UIColor.systemBackground.cgColor
+        contentView.backgroundColor = .systemBackground
     }
 
 }

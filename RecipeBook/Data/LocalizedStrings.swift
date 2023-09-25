@@ -16,5 +16,10 @@ enum LocalizedStrings: String {
     case categoriesTitleLabel = "categoriesTitleLabelKey"
     case seeAllButton = "seeAllButtonKey"
     case recommendationsTitleLabel = "recommendationsTitleLabelKey"
+    case categoryDescriptionTitleLabel = "categoryDescriptionTitleLabelKey"
+    case mealsTitleLabel = "mealsTitleLabelKey"
+    case backButton = "backButtonTitleKey"
+    case readMoreLabel = "readMoreLabelKey"
+    case readLessLabel = "readLessLabelKey"
 
 }

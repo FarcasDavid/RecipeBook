@@ -12,3 +12,9 @@
 "categoriesTitleLabelKey" = "Categorii";
 "seeAllButtonKey" = "Vezi toate";
 "recommendationsTitleLabelKey" = "Recomandări";
+"categoryDescriptionTitleLabelKey" = "Descriere";
+"mealsTitleLabelKey" = "Rețete";
+"backButtonTitleKey" = "Înapoi";
+"readMoreLabelKey" = "...Vezi mai mult";
+"readLessLabelKey" = "Vezi mai puțin";
+
