@@ -17,7 +17,6 @@ class MealsCell: UITableViewCell {
     }
 
     private func setup() {
-        contentView.backgroundColor = .systemGray6
         mealImageView.layer.cornerRadius = 16
     }
 

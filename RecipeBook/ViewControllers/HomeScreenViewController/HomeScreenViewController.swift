@@ -195,24 +195,23 @@ extension HomeScreenViewController: UICollectionViewDelegate {
     }
 
     func jumpToCategoryDetails() {
-        performSegue(withIdentifier: "goToCategoriesScreen", sender: self)
+        performSegue(withIdentifier: "goToCategoryDetails", sender: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToCategoriesScreen" {
+        if segue.identifier == "goToCategoryDetails" {
             if let selectedIndexPath = categoriesCollectionView.indexPathsForSelectedItems?.first,
-               let categoriesScreenViewController = segue.destination as? CategoriesScreenViewController {
-                categoriesScreenViewController.modalPresentationStyle = .fullScreen
+               let categoryDetailsViewController = segue.destination as? CategoryDetailsViewController {
+                categoryDetailsViewController.modalPresentationStyle = .fullScreen
                 let selectedCategory = viewModel.categories[selectedIndexPath.row]
-                categoriesScreenViewController.titleText = selectedCategory.title
-                categoriesScreenViewController.descriptionText = selectedCategory.description
-                categoriesScreenViewController.image = selectedCategory.image
+                categoryDetailsViewController.titleText = selectedCategory.title
+                categoryDetailsViewController.descriptionText = selectedCategory.description
+                categoryDetailsViewController.image = selectedCategory.image
                 for meal in viewModel.recommendations where meal.category == selectedCategory.title {
-                    categoriesScreenViewController.meal.append(meal)
+                    categoryDetailsViewController.meal.append(meal)
                 }
             }
         }
     }
-
 
 }

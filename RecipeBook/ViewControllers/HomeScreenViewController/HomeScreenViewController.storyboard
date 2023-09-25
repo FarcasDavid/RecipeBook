@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -220,22 +221,22 @@
                         <outlet property="seeAllRecommendationsButton" destination="tSj-PQ-1fv" id="qgn-nU-QqY"/>
                         <outlet property="titleMainScreenLabel" destination="X40-Cc-4Sy" id="UQ3-TU-WhT"/>
                         <outlet property="welcomeUserLabel" destination="lE8-Tl-adb" id="Vh8-Jf-ewb"/>
-                        <segue destination="ztf-jt-GDE" kind="show" identifier="goToCategoriesScreen" id="1xj-wG-Wxv"/>
+                        <segue destination="ztf-jt-GDE" kind="show" identifier="goToCategoryDetails" id="Ct4-h6-t5Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2919.8473282442746" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="3846.5648854961833" y="4.9295774647887329"/>
         </scene>
-        <!--CategoriesScreen-->
+        <!--CategoryDetails-->
         <scene sceneID="eur-bY-6hY">
             <objects>
-                <viewControllerPlaceholder storyboardName="CategoriesScreenViewController" referencedIdentifier="CategoriesScreenViewController" id="ztf-jt-GDE" userLabel="CategoriesScreen" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="CategoryDetailsViewController" referencedIdentifier="CategoryDetailsViewController" id="ztf-jt-GDE" userLabel="CategoryDetails" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="9u8-Gm-END"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBI-N2-4qg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3799.2366412213737" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="4725.9541984732823" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>
@@ -244,7 +245,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

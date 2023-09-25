@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CategoriesScreenViewController: UIViewController {
+class CategoryDetailsViewController: UIViewController {
 
     @IBOutlet private weak var categoryImageView: UIImageView!
     @IBOutlet private weak var categoryTitleLabel: UILabel!
@@ -27,7 +27,7 @@ class CategoriesScreenViewController: UIViewController {
     // Meals passed from HomeScreenVC
     var meal = [MealRecommendations]()
 
-    private var viewModel: CategoriesScreenViewModel = CategoriesScreenViewModel()
+    private var viewModel: CategoryDetailsViewModel = CategoryDetailsViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,6 @@ class CategoriesScreenViewController: UIViewController {
     func setupUI() {
         categoryDescriptionTitleLabel.text = LocalizedStrings.categoryDescriptionTitleLabel.rawValue.localized()
         mealsTitleLabel.text = LocalizedStrings.mealsTitleLabel.rawValue.localized()
-       // view.backgroundColor = UIColor.systemGray6
         categoryImageView.image = image
         categoryTitleLabel.text = titleText
         categoryDescriptionContentLabel.appendReadmore(after: descriptionText ?? "", trailingContent: .readmore)
@@ -70,15 +69,14 @@ class CategoriesScreenViewController: UIViewController {
                         trailingContent: .readmore
                     )
                 } else { return }
-
     }
 
 }
 
-extension CategoriesScreenViewController: UITableViewDelegate {
+extension CategoryDetailsViewController: UITableViewDelegate {
 
     func setupTableView() {
-        var totalHeight = CGFloat(meal.count) * cellHeight
+        let totalHeight = CGFloat(meal.count) * cellHeight
         mealsTableView.dataSource = self
         mealsTableView.delegate = self
         mealsTableView.backgroundColor = .clear
@@ -100,7 +98,7 @@ extension CategoriesScreenViewController: UITableViewDelegate {
 
 }
 
-extension CategoriesScreenViewController: UITableViewDataSource {
+extension CategoryDetailsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return meal.count
